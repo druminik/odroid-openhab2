@@ -1,0 +1,16 @@
+openhab:
+  #image: 'openhab'
+  #image: 'openhab/openhab:armhf-online'
+  image: 'dli/openhab'
+  restart: always
+  ports:
+    - "8080:8080"
+    - "8443:8443"
+    - "5555:5555"
+  net: "bridge"
+  volumes:
+    - '/etc/localtime:/etc/localtime:ro'
+    - '/etc/timezone:/etc/timezone:ro'
+  devices:
+    - "/dev/ttyACM0:/dev/ttyACM0"
+  command: "server"
