@@ -14,3 +14,4 @@ openhab:
   devices:
     - "/dev/ttyACM0:/dev/ttyACM0"
   command: "server"
+  container_name: "openhab2"
